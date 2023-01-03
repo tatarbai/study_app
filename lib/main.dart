@@ -95,7 +95,21 @@ class _MyHomePageState extends State<MyHomePage> {
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
+          children: <Widget>[
+            SvgPicture.asset(
+              "assets/images/Edit.svg",
+              color: Colors.red,
+            ),
+            SvgPicture.network(
+              "https://www.svgrepo.com/show/140650/web-link.svg",
+              color: Colors.blue,
+              width: 64,
+              height: 64,
+              placeholderBuilder: (BuildContext context) => Container(
+                  padding: const EdgeInsets.all(30.0),
+                  child: const CircularProgressIndicator()),
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
